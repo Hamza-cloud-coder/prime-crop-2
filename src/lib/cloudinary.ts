@@ -6,10 +6,13 @@ export const getCloudinaryUrl = (publicId: string, isVideo = false): string => {
     return '';
   }
 
+  // Prepend folder if not already present
+  const finalPublicId = publicId.startsWith('Prime images/') ? publicId : `Prime images/${publicId}`;
+
   const baseUrl = isVideo
     ? `https://res.cloudinary.com/${CLOUD_NAME}/video/upload`
-    : `https://res.cloudinary.com/${CLOUD_NAME}/image/upload/f_auto,q_auto`; // Added optimization parameters
+    : `https://res.cloudinary.com/${CLOUD_NAME}/image/upload/f_auto,q_auto`;
   
-  const url = `${baseUrl}/${publicId}`;
+  const url = `${baseUrl}/${encodeURIComponent(finalPublicId)}`;
   return url;
 };
