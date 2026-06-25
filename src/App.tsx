@@ -118,12 +118,12 @@ const Navbar = ({ toggleMenu }: { toggleMenu: () => void }) => {
     >
       <Link to="/" className="flex items-center gap-2">
         <img 
-          src={getCloudinaryUrl('logo33', false, '')} 
+          src={getCloudinaryUrl('logo44.png')} 
           alt="Prime Crop Icon" 
           className="hidden md:block h-8 w-auto object-contain" 
         />
         <img 
-          src={getCloudinaryUrl('logo33', false, '')} 
+          src={getCloudinaryUrl('logo44.png')} 
           alt="Prime Crop Icon" 
           className="md:hidden h-8 w-auto object-contain" 
         />
@@ -173,7 +173,7 @@ const MenuOverlay = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void
         >
           <Link to="/" onClick={onClose} className="absolute top-6 left-6 flex items-center gap-2">
             <img 
-              src={getCloudinaryUrl('logo33', false, '')} 
+              src={getCloudinaryUrl('logo44.png')} 
               alt="Prime Crop Icon" 
               className="h-8 w-auto object-contain" 
             />
@@ -302,7 +302,7 @@ const HeroBackground = ({ src, alt }: { src: string, alt: string }) => {
         className="absolute inset-0 w-full h-full object-cover opacity-100"
         loading="eager"
       />
-      <div className="absolute inset-0 bg-[#085b20]/90"></div>
+      <div className="absolute inset-0 bg-[#085b20]/50"></div>
     </>
   );
 };
@@ -384,7 +384,7 @@ const ProjectDetailPage = () => {
 const HomeHero = () => {
   return (
     <section className="pt-32 md:pt-52 pb-16 md:pb-24 px-6 text-center relative overflow-hidden" data-aos="fade-up">
-      <HeroBackground src={getCloudinaryUrl('hero2', false, '')} alt="Home background" />
+      <HeroBackground src={getCloudinaryUrl('hero3.webp')} alt="Home background" />
       
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="flex justify-center mb-8 md:mb-12">
