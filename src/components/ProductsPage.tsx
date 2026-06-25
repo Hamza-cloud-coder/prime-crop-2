@@ -99,7 +99,7 @@ const ProductsPage = () => {
               >
                 <div className="relative rounded-[24px] overflow-hidden aspect-[4/5] bg-[#E8E8E8] mb-4">
                   <img 
-                    src={getCloudinaryUrl(product.image)}
+                    src={getCloudinaryUrl(product.image, false, '')}
                     alt={product.name}
                     loading="lazy"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
