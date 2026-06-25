@@ -30,7 +30,7 @@ const ProductsPage = () => {
         {/* Filters */}
         <div className="mb-12">
           {/* Desktop Filter */}
-          <div className="hidden md:flex flex-wrap gap-3">
+          <div className="hidden md:flex flex-nowrap gap-3 justify-end">
             {categories.map(category => (
               <button
                 key={category}
@@ -57,9 +57,9 @@ const ProductsPage = () => {
             </button>
             {isDropdownOpen && (
               <motion.div 
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                className="absolute top-full left-0 w-full mt-2 bg-[#E5E7EB] rounded-2xl p-4 z-20 shadow-lg"
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: 'auto' }}
+                className="w-full mt-2 bg-[#E5E7EB] rounded-2xl p-4 shadow-lg"
               >
                 {categories.map(category => (
                   <button

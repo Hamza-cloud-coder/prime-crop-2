@@ -652,9 +652,9 @@ const FeaturedWorks = () => {
             </h2>
           </div>
           
-          <div className="relative w-full max-w-xs">
+          <div className="relative">
             {/* Desktop Filter (Existing Buttons) */}
-            <div className="hidden md:flex flex-wrap gap-3">
+            <div className="hidden md:flex flex-nowrap gap-3 justify-end">
               {categories.map((cat, idx) => (
                 <button 
                   key={idx}
