@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { productData } from "./productData";
 import { Leaf, Smile, Droplets, ChevronDown, ChevronUp } from "lucide-react";
+import { getCloudinaryUrl } from "../lib/cloudinary";
 
 const ProductsPage = () => {
   const [activeCategory, setActiveCategory] = useState("All");
@@ -98,8 +99,9 @@ const ProductsPage = () => {
               >
                 <div className="relative rounded-[24px] overflow-hidden aspect-[4/5] bg-[#E8E8E8] mb-4">
                   <img 
-                    src={new URL(`../public/${product.image}`, import.meta.url).href}
+                    src={getCloudinaryUrl(product.image)}
                     alt={product.name}
+                    loading="lazy"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     onError={(e) => {
                       (e.target as HTMLImageElement).src = 'data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22200%22%20height%3D%22200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23f5f5f5%22%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20font-size%3D%2220%22%20text-anchor%3D%22middle%22%20dominant-baseline%3D%22middle%22%20fill%3D%22%23ccc%22%3ENo%20Image%3C%2Ftext%3E%3C%2Fsvg%3E';
