@@ -10,7 +10,7 @@ export const getCloudinaryUrl = (publicId: string, isVideo = false, folder = 'Pr
   const finalPublicId = folder && !publicId.startsWith(`${folder}/`) ? `${folder}/${publicId}` : publicId;
 
   // If in development mode, return the local path
-  if (import.meta.env.MODE === 'development') {
+  if ((import.meta as any).env?.MODE === 'development') {
     return `/${publicId.split('/').pop()}`;
   }
 

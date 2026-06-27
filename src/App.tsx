@@ -53,9 +53,7 @@ import {
   Truck,
   MapPin,
   Mail,
-  Phone,
-  ChevronDown,
-  ChevronUp
+  Phone
 } from 'lucide-react';
 
 // --- Global Components ---
@@ -215,11 +213,10 @@ const MainFooter = () => {
           <div>
             <h4 className="font-bold text-[14px] uppercase tracking-widest mb-6 text-white">Company</h4>
             <ul className="space-y-4 text-[14px] font-medium text-white/70">
+              <li><Link to="/" className="hover:text-[#bded04] transition-colors">Home</Link></li>
               <li><Link to="/about" className="hover:text-[#bded04] transition-colors">About Us</Link></li>
-              <li><Link to="/services" className="hover:text-[#bded04] transition-colors">Export Services</Link></li>
-              <li><Link to="/projects" className="hover:text-[#bded04] transition-colors">Our Quality</Link></li>
-              <li><Link to="#contact" className="hover:text-[#bded04] transition-colors">Contact Us</Link></li>
-              <li><Link to="/faq" className="hover:text-[#bded04] transition-colors">FAQ</Link></li>
+              <li><Link to="/products" className="hover:text-[#bded04] transition-colors">Products</Link></li>
+              <li><Link to="/contacts" className="hover:text-[#bded04] transition-colors">Contact Us</Link></li>
             </ul>
           </div>
           <div>
@@ -674,7 +671,7 @@ const FeaturedWorks = () => {
             <div className="md:hidden relative w-full">
               <button
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                className="w-full flex justify-between items-center bg-[#f2efe3] p-4 rounded-2xl font-medium text-[#1a3819]"
+                className="w-full flex justify-between items-center bg-[#E5E7EB] p-4 rounded-2xl font-medium text-[#1a3819]"
               >
                 {activeCategory}
                 {isDropdownOpen ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
@@ -683,7 +680,7 @@ const FeaturedWorks = () => {
                 <motion.div 
                   initial={{ opacity: 0, height: 0 }}
                   animate={{ opacity: 1, height: 'auto' }}
-                  className="w-full mt-2 bg-[#f2efe3] rounded-2xl p-4"
+                  className="w-full mt-2 bg-[#E5E7EB] rounded-2xl p-4 shadow-lg"
                 >
                   {categories.map((cat, idx) => (
                     <button
@@ -693,7 +690,7 @@ const FeaturedWorks = () => {
                         setIsDropdownOpen(false);
                       }}
                       className={`block w-full text-left py-2 px-2 rounded-xl transition-colors ${
-                        activeCategory === cat ? "bg-[#c5f03d] text-[#1a3819]" : "hover:bg-white/50"
+                        activeCategory === cat ? "bg-white text-[#1a3819] font-semibold" : "hover:bg-white/50 text-[#1a3819]/80"
                       }`}
                     >
                       {cat}
@@ -706,7 +703,7 @@ const FeaturedWorks = () => {
         </div>
 
         {/* Product Horizontal Scroll */}
-        <div className="flex gap-6 mb-16 overflow-x-auto pb-6 snap-x snap-mandatory no-scrollbar">
+        <div className="flex gap-6 mb-16 overflow-x-auto overflow-y-hidden pb-6 snap-x snap-mandatory no-scrollbar">
           {filteredProducts.map((product, i) => (
             <div 
               key={i}
@@ -1662,8 +1659,8 @@ const CTASection = () => {
 
 const AboutHero = () => {
   return (
-    <section className="pt-32 md:pt-52 pb-16 md:pb-24 px-6 text-center relative overflow-hidden" data-aos="fade-up">
-      <HeroBackground src={getCloudinaryUrl('Ubuntu-Towers-jpg-webp.webp')} alt="About background" />
+    <section className="pt-32 md:pt-52 pb-16 md:pb-24 px-6 text-center relative overflow-hidden bg-[#085b20]" data-aos="fade-up">
+      <div className="absolute inset-0 bg-[#085b20]" />
       
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="max-w-5xl mx-auto">
@@ -2159,8 +2156,8 @@ const ProjectsGrid = () => {
 
 const ContactsHero = () => {
   return (
-    <section className="pt-32 md:pt-48 pb-16 md:pb-24 px-4 md:px-6 text-center relative overflow-hidden" data-aos="fade-up">
-      <HeroBackground src={getCloudinaryUrl('f18.png')} alt="Contacts background" />
+    <section className="pt-32 md:pt-48 pb-16 md:pb-24 px-4 md:px-6 text-center relative overflow-hidden bg-[#085b20]" data-aos="fade-up">
+      <div className="absolute inset-0 bg-[#085b20]" />
       
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="max-w-4xl mx-auto" data-aos="fade-up">
@@ -2470,7 +2467,7 @@ const PartnerWithUs = () => {
   );
 };
 
-import farmer2Image from '/src/public/farmer2.jpeg';
+const farmer2Image = new URL('./public/farmer2.jpeg', import.meta.url).href;
 
 const ImpactSection = () => (
   <section className="py-20 px-6 bg-[#085b20] text-white">
