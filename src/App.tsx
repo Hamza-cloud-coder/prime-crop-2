@@ -144,7 +144,7 @@ const Navbar = ({ toggleMenu }: { toggleMenu: () => void }) => {
           <Menu size={20} />
         </button>
         <a 
-          href="https://wa.me/255724164726?text=Hello%20Prime%20Crop%2C%20I%20would%20like%20to%20order" 
+          href="https://wa.me/255724164726?text=Hello%20Prime%20Crop%2C%20I%20would%20like%20to%20get%20a%20quote%20%F0%9F%98%8A" 
           target="_blank" 
           rel="noopener noreferrer" 
           className="hidden md:flex bg-[#bded04] text-[#085b20] px-5 py-2 rounded-full text-[13px] font-bold hover:bg-[#a5d003] transition-all items-center gap-2"
@@ -245,7 +245,7 @@ const MainFooter = () => {
                 { Icon: Linkedin, url: "#" },
                 { Icon: Instagram, url: "#" },
                 { Icon: Twitter, url: "#" },
-                { Icon: MessageCircle, url: "https://wa.me/255724164726?text=Hello%20Prime%20Crop%2C%20I%20would%20like%20to%20order" }
+                { Icon: MessageCircle, url: "https://wa.me/255724164726?text=Hello%20Prime%20Crop%2C%20I%20would%20like%20to%20get%20a%20quote%20%F0%9F%98%8A" }
               ].map(({ Icon, url }, i) => (
                 <a 
                   key={i} 
@@ -410,7 +410,7 @@ const HomeHero = () => {
           transition={{ delay: 0.4 }}
         >
           <a 
-            href="https://wa.me/255724164726?text=Hello%20Prime%20Crop%2C%20I%20would%20like%20to%20order" 
+            href="https://wa.me/255724164726?text=Hello%20Prime%20Crop%2C%20I%20would%20like%20to%20get%20a%20quote%20%F0%9F%98%8A" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="bg-[#bded04] text-[#085b20] px-8 py-3 rounded-full text-sm font-bold hover:bg-[#a5d003] transition-all flex items-center gap-2 mx-auto w-fit shadow-lg shadow-[#bded04]/20"

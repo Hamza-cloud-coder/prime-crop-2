@@ -94,7 +94,7 @@ const ProductsPage = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 className="bg-[#fdfcf8] rounded-[32px] p-3 shadow-sm hover:shadow-md transition-shadow duration-300 group cursor-pointer border border-black/5"
-                  onClick={() => window.open("https://wa.me/255724164726?text=Hello%20Prime%20Crop%2C%20I%20would%20like%20to%20order", "_blank")}
+                  onClick={() => window.open(`https://wa.me/255724164726?text=${encodeURIComponent(`Hello Prime Crop, I would like to order ${product.name} 😊`)}`, "_blank")}
               >
                 <div className="relative rounded-[24px] overflow-hidden aspect-[4/5] bg-[#E8E8E8] mb-4">
                   <img 
@@ -118,7 +118,7 @@ const ProductsPage = () => {
                   <button 
                     onClick={(e) => {
                       e.stopPropagation();
-                      window.open("https://wa.me/255724164726?text=Hello%20Prime%20Crop%2C%20I%20would%20like%20to%20order", "_blank");
+                      window.open(`https://wa.me/255724164726?text=${encodeURIComponent(`Hello Prime Crop, I would like to order ${product.name} 😊`)}`, "_blank");
                     }}
                     className="hidden md:block bg-[#bded04] text-[#085b20] text-sm px-4 py-2 rounded-full hover:bg-[#a5d003] transition-colors"
                   >
